@@ -20,24 +20,32 @@
     div.nGY2GThumbnailIconText {
         visibility: hidden;
     }
-    div.nGY2GThumbnailLabel > div.nGY2GThumbnailDescription{
+
+    div.nGY2GThumbnailLabel > div.nGY2GThumbnailDescription {
         font-family: "Open Sans Bold", sans-serif;
         color: #ffffff;
+
     }
-    div.nGY2Navigationbar > div{
-        font-size: 1.5em;
+
+    div.nGY2Navigationbar > div {
+        font-size: 3.5em;
         font-family: "Open Sans Bold", sans-serif;
     }
-    .nGY2ViewerToolsTopRight > div:nth-child(1) > div:nth-child(1){
+
+    .nGY2ViewerToolsTopRight > div:nth-child(1) > div:nth-child(1) {
         font-family: "Open Sans Bold", sans-serif;
-        font-size: 1em;
+        font-size: 3em;
+    }
+
+    .nGY2 .nGY2GThumbnailDescription {
+        Text-Shadow: #000000 0.1em 0px 0px, #000000 0.1em 0.1em 0px, #000000 0.1em -0.1em 0px, #000000 -0.1em 0.1em 0px, #000000 -0.1em 0px 0px, #000000 -0.1em -0.1em 0px, #000000 0px 0.1em 0px, #000000 0px -0.1em 0px;
     }
 
 </style>
 <body>
 <div id="gallery"></div>
 <script type="text/javascript">
-    var myCS= { navigationBreadcrumb: { background: '#000', color: '#fff', colorHover: '#ccc', borderRadius: '0'} };
+    var myCS = {navigationBreadcrumb: {background: '#000', color: '#fff', colorHover: '#ccc', borderRadius: '0'}};
     $("#gallery").nanogallery2({
         userID: "156584432@N06",
         kind: "flickr",
@@ -59,7 +67,7 @@
         },
 //        thumbnailHoverEffect2: 'label_font-size_1em_1.5em|title_backgroundColor_rgba(255,255,255,0.34)_rgba(((84,132,12,0.8)|title_color_#000_#fff|image_scale_1.00_1.10_5000|image_rotateZ_0deg_4deg_5000',
         viewerImageDisplay: "upscale",
-        viewerToolbar:{
+        viewerToolbar: {
             display: false
         }
     });
