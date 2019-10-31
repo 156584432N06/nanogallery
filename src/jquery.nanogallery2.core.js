@@ -8298,7 +8298,7 @@
     }
 
     function Complain(e) {
-        window.open("http://elena-ivanchikhina.ru/?page_id=432");
+        window.open("https://dialogstelom.ru/photo_complain");
     }
 
     function StopPropagationPreventDefault(e) {
