@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta name="robots" content="noindex">
+    <!-- jQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <!-- nanogallery2 -->
+    <link href="src/css/nanogallery2.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="src/jquery.nanogallery2.core.js"></script>
+    <script type="text/javascript" src="src/jquery.nanogallery2.data_flickr.js"></script>
+    <meta charset="UTF-8">
+    <title>Галерея</title>
+</head>
+<style type="text/css">
+    body {
+        background-color: #000;
+    }
+
+    div.nGY2GThumbnailIconText {
+        visibility: hidden;
+    }
+    div.nGY2GThumbnailLabel > div.nGY2GThumbnailDescription{
+        font-family: "Open Sans Bold", sans-serif;
+        color: #ffffff;
+    }
+    div.nGY2Navigationbar > div{
+        font-size: 1.5em;
+        font-family: "Open Sans Bold", sans-serif;
+    }
+    .nGY2ViewerToolsTopRight > div:nth-child(1) > div:nth-child(1){
+        font-family: "Open Sans Bold", sans-serif;
+        font-size: 1em;
+    }
+
+</style>
+<body>
+<div id="gallery"></div>
+<script type="text/javascript">
+    var myCS= { navigationBreadcrumb: { background: '#000', color: '#fff', colorHover: '#ccc', borderRadius: '0'} };
+    $("#gallery").nanogallery2({
+        userID: "156584432@N06",
+        kind: "flickr",
+        galleryTheme: myCS,
+        thumbnailBackground: "#fff",
+        thumbnailBorderHorizontal: 0,
+        thumbnailBorderVertical: 0,
+        thumbnailWidth: "450%", thumbnailHeight: 'auto',
+        thumbnailBaseGridHeight: "200%",
+        thumbnailLabel: {
+            position: 'overImageOnBottom',
+            hideIcons: true,
+            titleFontSize: '0em',//hack. Title contains garbage i.e. filename, but albums must have a title. So I use description as a title.
+            display: true,
+            displayDescription: true,
+            descriptionMaxLength: 200,
+            descriptionMultiLine: true,
+            descriptionFontSize: "1.5em"
+        },
+        thumbnailHoverEffect2: 'label_font-size_1em_1.5em|title_backgroundColor_rgba(255,255,255,0.34)_rgba(((84,132,12,0.8)|title_color_#000_#fff|image_scale_1.00_1.10_5000|image_rotateZ_0deg_4deg_5000',
+        viewerImageDisplay: "upscale",
+        viewerToolbar:{
+            display: false
+        }
+    });
+</script>
+</body>
+</html>
